@@ -25,4 +25,4 @@ heroku config:set "JWT_SECRET=supersecret"
 
 ## License
 
-Murshid Azher
+[MIT](https://github.com/murshidazher/saml-multtenancy/blob/master/LICENSE) © Murshid Azher.
