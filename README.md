@@ -5,6 +5,12 @@
 Install the server dependencies
 
 ```sh
-git subtree push --prefix <subfolder> heroku master
+git subtree push --prefix server heroku master
 ```
 https://saml-multitenancy.herokuapp.com/
+
+```
+heroku config:set "MONGODB_URI=mongodb_srv://<username>:<password>@cluster0-..."
+heroku config:set "SALT=8"
+heroku config:set "JWT_SECRET=supersecret"
+```
