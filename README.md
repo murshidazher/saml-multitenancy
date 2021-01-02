@@ -1,4 +1,4 @@
-# saml-multi-tenancy
+# [saml-multi-tenancy](https://github.com/murshidazher/saml-multitenancy)
 
 > We are using custom datastore `mongodb` and own authentication method using jwt in `nodejs`.
 
@@ -12,15 +12,15 @@ Install the server dependencies
 > Heroku hosted [URL](https://saml-multitenancy.herokuapp.com/)
 
 ```sh
-git subtree push --prefix server heroku master
+> git subtree push --prefix server heroku master
 ```
 
 Heroku `env` variable list
 
-```
-heroku config:set "MONGODB_URI=mongodb_srv://<username>:<password>@cluster0-..."
-heroku config:set "SALT=8"
-heroku config:set "JWT_SECRET=supersecret"
+```sh
+> heroku config:set "MONGODB_URI=mongodb_srv://<username>:<password>@cluster0-..."
+> heroku config:set "SALT=8"
+> heroku config:set "JWT_SECRET=supersecret"
 ```
 
 ## License
