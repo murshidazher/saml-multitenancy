@@ -1,10 +1,18 @@
 {
   "name": "saml-multitenancy",
   "version": "1.0.0",
-  "description": "A sample project",
+  "description": "An implementation for managing multi-tenancy with SAML",
   "main": "index.js",
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npm install --prefix server && npm install --prefix client",
+    "client:start": "npm run start --prefix client",
+    "client:build": "npm run build --prefix client",
+    "server:start": "npm run start --prefix server",
+    "start": "concurrently --kill-others-on-fail \"npm run server:start\" \"npm run client:start\""
   },
   "repository": {
     "type": "git",
@@ -16,5 +24,8 @@
   "bugs": {
     "url": "https://github.com/murshidazher/saml-multitenancy/issues"
   },
-  "homepage": "https://github.com/murshidazher/saml-multitenancy#readme"
+  "homepage": "https://github.com/murshidazher/saml-multitenancy#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.2"
+  }
 }
